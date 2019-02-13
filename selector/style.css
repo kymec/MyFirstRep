@@ -1,0 +1,155 @@
+html {
+    font-family: Calibri;
+}
+
+.wrapper::before { /*псевдоселектор добавляет контент в начале тега*/
+    content: 'Меню';
+
+}
+
+.descr {
+    color: red;
+    text-decoration: underline;
+    font-weight: 700; /* 100 200 400-стандарт 700 жирный 900 максимум*/
+}
+
+.wrapper::after {
+    content: url('g.png');
+}
+
+ul li:first-child {
+    /*Псевдоселектор - выбирает 1 элемент из детей тега*/
+    color: red;
+
+}
+
+ul li:last-child {
+    color: blue;
+}
+
+ul li:nth-child(5) {        /*номер по порядку (число) или выражение*/
+    color: forestgreen;
+}
+
+ul li:nth-child(odd) {        /*нечетные*/
+    color: forestgreen;
+}
+
+ul li:nth-child(even) {        /*четные*/
+    color: red;
+}
+
+ul li:nth-child(5n+1) {        /*каждый пятый  5*0 5*1 5*2 5*3 */
+    color: tomato   ;
+}
+.button {
+    text-decoration: none;
+    border: 1px solid black;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 10px 10px 5px 10px;
+    background: firebrick;
+    color: white;
+    
+
+}
+
+.button:hover  {  /*hover при наведении*/
+    opacity: 0.7; /*прозрачность*/
+}
+
+.button:active { /*active клик*/
+    border: 3px solid black;
+
+}
+
+.button::first-letter {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.button:focus {
+    background-color: yellow;
+}
+
+.wrapper:focus-within { /*при фокусе элемента внутри применяет на блок*/
+    background: darkmagenta;
+}
+
+div.button:last-of-type {
+    background-color: rgba(0, 0, 0, .7); /*rgba цвет с прозрачностью в процентах*/
+    opacity: 4;
+}
+
+ul li {
+    line-height: 30px; /*30px - 30 пикселей  3 - в 3 раза увеличить*/
+}
+
+a.button:first-of-type{
+    padding: 0px 30px;
+    height: 80px;               /*высоту линии и высоту блока задаем одинаковой чтоб не сьезжал текст относительно блока*/
+    line-height: 80px;
+    vertical-align: top;
+}
+
+a.button:first-of-type::first-letter{
+    font-size: inherit;
+}
+
+.box {
+    padding: 30px!important;
+}
+
+#box {
+    padding: 15px;
+}
+
+/*приоритет
+important прописано, использовать в крайнем случае
+
+инлайн
+
+id
+
+class
+
+
+*/
+
+body.box {
+    /*
+    приоритеты:
+
+    * - 0
+    li - 1
+    li:first-letter - 2
+    ul li 2
+    .class 10
+    ul li.class 12
+    li.class.class 21
+    #box 100
+
+
+    приоритет то что ниже
+    
+    
+    */
+}
+
+
+
+.position{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.pos-wrap{
+    height: 500px;
+    width: 500px;
+    position: relative;
+}
+
+
+
+
