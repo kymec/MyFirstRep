@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <!--
+        accept-charset="" - принимает кодировку редко используется
+        action - ссылка на обработчик формы на сервере
+        autocomplete - автозаполнение введенных данных
+        enctype - формат отправки данных
+        method - GET - строкой, POST - 
+        name - уникальное имя формы
+        target - нужен когда action не задан 
+        novalidate - отключает проверку текста в полях
+
+    -->
+    <form action="#" autocomplete="on" method="GET" name="registration" target="_blank">
+
+        <input type="text"/>
+
+        <fieldset disabled  name="contact">
+            <legend>Контактная информация:</legend>
+            <input type="text"/>
+            <input type="text"/>
+            <input type="text"/>
+
+        </fieldset>
+
+        <!--
+            Input
+
+            accept - принимается только типом file  и передается тип принимаемых файлов *.doc audio/*
+            autofocus - берёт в фокус при загрузке
+            disabled - запрещает ввод, делает неактивным
+            formaction - в submit или image переопределяет действие аction в форме
+        -->
+
+
+        <input type="file" accept="audio/*" />
+        <br>
+        <input type="image" src="logo.png" alt="logo"/>
+        <br>
+        <input type="text" autocomplete="on" pattern="[a-z]{3}" required size="30">
+        <br>
+        <input type="checkbox" checked  >
+        <br>
+        <input type="radio" checked >
+        <br>    
+        <input type="submit" formaction="/send.php" formenctype="application/x-www-form-urlencoded" formmethod="POST">
+        <br>
+        <input type="number" min="0" max="10" step="2" >
+        <br>
+        <input type="email" placeholder="email" value="test@mail.ru" readonly>
+        <br>
+        <input type="password">
+        <br>
+        <input type="button" value='"dd"'>
+        <br>
+        <input type="color">
+        <br>
+        <input type="date">
+        <br>
+        <input type="datetime-local">
+        <br>
+        <input type="email" hidden>
+        <br>
+        <input type="month">
+        <br>
+        <input type="range" min="1" max="100" step="5">
+        <br>
+        <input type="reset">
+        <br>
+        <input type="search">
+        <br>
+        <input type="week" value="2019-W11">
+        <br>
+        <textarea rows="1" cols="10" wrap="hard">
+        </textarea>
+        <br>
+        <!--
+            SELECT 
+            disabled
+            form
+
+        -->
+        <select autofocus multiple name="brand" size="8">
+            <optgroup label="Phones">
+                <option disabled>Apple</option>
+                <option label="H">LG</option>
+                <option>Huawei</option>
+            </optgroup> 
+            <optgroup disabled label="Tabs">
+                <option value="4456">Apple</option>
+                <option>LG</option>
+                <option>Huawei></option>
+            </optgroup> 
+        </select>
+        <br>
+
+        <label for="text2">Имя текста</label>
+        <input type="text" id="text2">
+        <br>
+
+        <label>
+            name
+            <input type="text">
+        </label>
+        <br>
+        <button type="submit">TEXT or img</button>
+        <br>
+
+        <label>
+            Чекбокс
+            <input type="checkbox">
+        </label>
+        <br>
+        <label>
+            Radio1
+            <input type="radio" name="rad" value='"dd"'>
+        </label>
+        <label>
+            Radio2
+            <input type="radio" name="rad">
+        </label>
+        <label>
+            Radio3
+            <input type="radio" name="rad">
+        </label>
+
+
+
+    </form>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    
+</body>
+</html>
