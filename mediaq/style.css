@@ -1,0 +1,33 @@
+.box{   
+    height: 1000px;
+    background-color: black;
+    color: white;
+    margin: 0 auto;
+}
+
+@media (min-width: 500px) and (max-width: 600px){
+    .box{
+        background-color: orange;
+    }
+}
+/* or - , */
+@media (orientation: portrait), (max-width: 600px){
+    .box{
+        background-color: orange;
+    }
+}
+
+@media not all and (monochrome){
+    .box{
+        background-color: orange;
+    }
+}
+@media (width: 300px){}
+
+@media (orientation: landscape){}
+@media (resolution: 300dpi){}
+@media (min-resolution: 300dpi){}
+@media (color){}
+@media (color: 4){}
+@media (min-monochrome: 16){}
+@media (){}
