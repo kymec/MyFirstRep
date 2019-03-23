@@ -22,24 +22,15 @@ ul{
     box-sizing: border-box;
 }
 
-/*Функцилнальные классы*/
-.float-l{
-    float: left;
-}
-.float-r{
-    float: right;
-}
-.pos-rel{
-    position: relative;
+
+.header-top{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
 }
 
-/*Header*/
-
-.header-logo {
-    width: 390px;
-}
 .header-address {
-    width: 310px;
     position: relative;
     padding-left: 30px;
     margin-top: 24px;
@@ -56,7 +47,6 @@ ul{
 }
 
 .header-contact {
-    width: 335px;
     margin-top: 24px;
 }
 .header-contact-tel{
@@ -118,11 +108,6 @@ ul{
 .header-top{
     padding: 15px 0;
 }
-.header-top:after{
-    content: '';
-    clear: both;
-    display: block;
-}
 .header-bottom {
     border-top: 1px solid #cbcccd;
 }
@@ -178,4 +163,13 @@ ul{
     border: none;
     border-radius: 0 3px 3px 0;
     cursor: pointer;
+}
+@media (max-width: 865px){
+    .header-price{
+        margin: 0 auto;
+    }
+}
+.header-bottom-search form{
+    display: flex;
+
 }
